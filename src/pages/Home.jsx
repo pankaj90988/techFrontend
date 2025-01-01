@@ -77,7 +77,7 @@ const Home = () => {
               <Link to="/contact">
                 <button className='connect-now'>Connect Now</button>
               </Link>
-              <Link>
+              <Link to="/services">
                 <button className='learn-more'>Learn More</button>
               </Link>
             </div>
