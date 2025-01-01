@@ -1,0 +1,136 @@
+.contact-section-wrapper {
+    background: rgb(32, 33, 32);
+    margin-top: 93.24px;
+    padding: 1.6rem 0rem;
+    background-image: url('../assets/black-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.contact-heading-container {
+    padding: 0rem 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-heading h2 {
+    padding: 0.3rem 1rem;
+    background: #752fd8;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-content-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    /* border: 2px solid red; */
+}
+
+.contact-image-container {
+    /* border: 2px solid green; */
+}
+
+.contact-form-container {
+    padding: 0.5rem;
+    width: 30%;
+    /* border: 2px solid blue; */
+}
+
+.contact-label-input-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container form label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-container form input {
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
+    outline: none;
+    border: 0.5px solid grey;
+    color: white;
+    background: #322f2f;
+    padding: 0.3rem 0.5rem;
+}
+
+.contact-form-container form textarea {
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
+    outline: none;
+    border: 0.5px solid grey;
+    color: white;
+    background: #2d2a2a;
+    padding: 0.3rem 0.5rem;
+}
+
+.contact-form-container .submit-btn {
+    padding: 0.4rem 1rem;
+    margin-top: 1.4rem;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 0 transparent;
+    cursor: pointer;
+    /* border: 0.5px solid white; */
+    background: #752fd8;
+}
+
+.contact-form-container .submit-btn:hover {
+    box-shadow: 0 0 0 0.1rem white;
+    scale: 1.1;
+}
+
+.map-container-wrapper {
+    padding: 2.5rem;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:720px) {
+    .contact-section-wrapper {
+        padding: 1rem 0rem;
+    }
+
+    .contact-content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* border: 2px solid red; */
+        padding: 1rem 0.2rem;
+    }
+
+    .contact-image-container {
+        width: 100%;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .contact-image-container img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .contact-form-container {
+        width: 100%;
+        /* border: 2px solid rgb(0, 255, 4); */
+        padding: 1rem 0.5rem;
+    }
+
+    .map-container-wrapper {
+        padding: 2rem 1rem;
+    }
+
+    .map-container iframe {
+        width: 100%;
+    }
+}

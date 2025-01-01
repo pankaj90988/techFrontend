@@ -1,0 +1,180 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.3rem 2rem;
+    /* border: 2px solid red; */
+    width: 100%;
+    position: fixed;
+    background: #000;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .active{
+    color: blueviolet;
+      /* color:orangered; */
+  }
+  .nav{
+      display: flex;
+  }
+  .nav li{
+      list-style: none;
+      margin-left: 1.8rem;
+      position: relative;
+      cursor: pointer;
+      padding: 0 0.5rem;
+      font-size: clamp(20px, 1.6vw, 3vw);
+  }
+  .nav li::after{
+      content: "";
+      position: absolute;
+      /* bottom: 0rem; */
+      left: 0;
+      width:0%;
+      /* height: 0.3rem; */
+      height: 1.5rem;
+      background: #076cef;
+      color: white;
+      transition: all 0.5s;
+      z-index: -1;
+  }
+  .nav li:hover::after{
+      width: 100%;
+      padding: 0.2rem 0.3rem;
+      border-radius: 0.2rem;
+      color: white;
+  }
+  .brand-logo{
+      overflow: hidden;
+  }
+  .brand-logo img{
+      width: 5rem;
+      scale: 1.9;
+      border-radius: 50%;
+  }
+  .search{
+      display: flex;
+      overflow: hidden;
+  }
+
+  .search .search-input{
+      padding: 0.3rem 0.6rem;
+      font-size: 1.3rem;
+      border: none;
+      outline: none;
+      width: 20rem;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border: 0.5px solid grey;
+  }
+  .search .search-btn{
+      font-size: 1.3rem;
+      padding: 0.3rem 0.6rem;
+      outline: none;
+      border: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border: 0.5px solid grey;
+      
+  }
+  .search-icon-menu-icon-main-cont{
+      display: none;
+  }
+  @media (max-width:720px) {
+    .container{
+        padding:0.3rem 1.5rem;
+    }
+      .main-menu-cont{
+          display: none;
+      }
+      .main-menu-cont-open{
+         display: block;
+      }
+      .nav{
+          position: absolute;
+          top: 15.8rem;
+          left: 50%;
+          translate: -50% -50%;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          background: #752fd8;
+          padding: 1.9rem 0;
+          backdrop-filter: blur(10px);
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+      }
+       .navWidth{
+          width: 100%;
+          transition: all 0.6s;
+          color: white;
+      } 
+      .nav li{
+          margin-top: 0.2rem;
+          cursor: pointer;
+          width:20rem;
+          font-size: 1.5rem;
+      }
+      .nav li NavLink{
+          text-decoration: none;
+      }
+      .main{
+          padding: 0.3rem 1.5rem;
+      }
+      .search {
+          /* display: none; */
+          position: absolute;
+          transform: translateX(-200%);
+          top: 120%; 
+          left: 50%;
+          translate: -50% -50%; 
+      }
+      .search .search-input{
+          padding: 0.3rem 0.6rem;
+          font-size: 1.3rem;
+          border: none;
+          outline: none;
+          width: 15rem;
+      }
+      .display{
+          top: 119%;
+          left: 50%;
+          translate: -50% -50%;
+          transition: all 0.5s;
+          transform: translateX(0);
+          z-index: 999;
+      }
+      .search-icon-menu-icon-main-cont{
+          display: block;
+          /* position: relative; */
+          /* border: 2px solid red; */
+      }
+      .search-icon-menu-icon{
+          display: flex;
+          justify-content: space-between;
+          gap: 1rem;
+          align-items: center;
+          
+      }
+      .menu-icon{
+          width: 2.7rem;
+          height: 2.75rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 4rem;
+      }
+      .search-icon{
+        font-size: 2rem;
+      }
+      .menu-cross-bar-search{
+        color: white;
+      }
+     
+  }

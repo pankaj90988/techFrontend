@@ -1,0 +1,105 @@
+.register-section{
+    margin-top: 93.24px;
+    background: rgb(32, 33, 32);
+    /* border: 2px solid green; */
+    padding: 3rem 0rem;
+    background-image: url('../assets/dark-red.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.registration-section{
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    padding: 0rem 2rem;
+}
+.registration-image img{
+    width: 100%;
+    object-fit: contain;
+
+    /* border: 2px solid pink; */
+}
+.registration-image h2{
+    padding: 0.1rem 1rem;
+    text-align: center;
+}
+.registration-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    /* border: 2px solid blue; */
+}
+.registration-form .main-heading{
+    font-size: 2.3rem;
+    padding: 0.2rem 1rem;
+    background: blueviolet;
+    border-radius: 5px;
+}
+.register-label-input-cont{
+    display: flex;
+    flex-direction: column;
+}
+.registration-form form label{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.registration-form form input{
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    outline: none;
+    border: 0.5px solid grey;
+    color: white;
+    background: #322f2f;
+    background: transparent;
+    padding: 0.3rem 0.5rem;
+}
+.registration-form .submit-btn{
+    padding: 0.4rem 0.9rem;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 transparent;
+    background: rgb(0, 115, 255);
+}
+.registration-form .submit-btn:hover{
+    box-shadow: inset 0 0 0 0.1rem white;
+    scale: 1.1;
+
+}
+.already{
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+}
+.login-route{
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    margin-top: 0.3rem;
+    color: white;
+    text-align: center;
+    background: blueviolet;
+}
+.login-route:hover{
+    box-shadow: inset 0 0 0 0.1rem white;
+    scale: 1.1;
+}
+@media (max-width:720px) {
+    .register-section{
+        padding: 1rem 0rem;
+    }
+    .registration-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* border: 2px solid red; */
+        padding: 1rem 0.5rem;
+    }
+    .registration-form{
+        /* border: 2px solid rgb(0, 255, 4); */
+        padding: 1rem 0.1rem;
+    }
+}

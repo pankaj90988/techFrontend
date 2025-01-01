@@ -1,0 +1,91 @@
+.error-section-wrapper {
+    margin-top: 93.24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-page-container {
+    width: 50%;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.error-page-container h2 {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to bottom, rgb(209, 48, 33), rgb(128, 10, 183));
+    background-clip: text;
+    color: transparent;
+    animation: changecolor 2.5s linear infinite;
+    transition: 0.5s changecolor;
+}
+
+@keyframes changecolor {
+    0% {
+        background: linear-gradient(to bottom, rgb(210, 58, 20), rgb(128, 10, 183));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    50% {
+        background: linear-gradient(to bottom, rgb(252, 1, 1), rgb(122, 14, 172));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    100% {
+        background: linear-gradient(to bottom, rgb(242, 94, 3), rgba(223, 177, 9, 0.948));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+
+.error-page-container h4 {
+    margin-bottom: 0.7rem;
+    font-size: 2rem;
+    color: red;
+}
+
+.error-page-container p {
+    text-wrap: wrap;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.error-page-container .btns button {
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.error-page-container .btns button:nth-child(1) {
+    box-shadow: inset 0 0 0 0.1rem white;
+   
+}
+.error-page-container .btns button:hover {
+    box-shadow: inset 0 0 0 0.1rem rgb(5, 60, 224);
+    
+}
+.error-page-container .btns button:nth-child(2):hover {
+    background: blueviolet;
+    color: white;
+}
+
+@media (max-width:720px) {
+    .error-page-container {
+        width: 100%;
+        padding: 3rem 1.3rem;
+        text-align: center;
+    }
+
+    .error-page-container .btns button {
+        margin-bottom: 1rem;
+    }
+}
