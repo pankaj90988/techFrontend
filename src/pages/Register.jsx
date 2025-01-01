@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import './Register.css'
 import RegiImage from '../assets/registration-3.png'
 
@@ -134,9 +134,9 @@ const Register = () => {
               </form>
                
                <p className='already'>Already registred ?</p>
-               <a className="login-route" href='/login'>
+               <Link className="login-route" to='/login'>
                 login
-               </a>
+               </Link>
             </div>
           </div>
         </main>

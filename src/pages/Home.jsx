@@ -6,6 +6,7 @@ import Analytic from '../components/Analytic'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Link } from 'react-router-dom'
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -73,12 +74,12 @@ const Home = () => {
             </p>
 
             <div className="btn-box">
-              <a href="/contact">
+              <Link to="/contact">
                 <button className='connect-now'>Connect Now</button>
-              </a>
-              <a href="/services">
+              </Link>
+              <Link>
                 <button className='learn-more'>Learn More</button>
-              </a>
+              </Link>
             </div>
 
           </div>
@@ -117,12 +118,12 @@ const Home = () => {
             </p>
 
             <div className="btn-box">
-              <a href="/contact">
+              <Link to="/contact">
                 <button className='connect-now'>Get Started</button>
-              </a>
-              <a href="/service">
+              </Link>
+              <Link to="/services">
                 <button className='learn-more'>Explore</button>
-              </a>
+              </Link>
             </div>
 
           </div>
@@ -130,7 +131,7 @@ const Home = () => {
       </section>
 
 
-      
+
     </>
   )
 }
