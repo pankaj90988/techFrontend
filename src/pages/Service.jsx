@@ -5,15 +5,13 @@ import ServiceImage from '../assets/registration-3.png'
 const Service = () => {
 
   const [servicedata, setServicedata] = useState([]);
-  const [res, setRes] = useState(true);
-  console.log(res)
+  
   const getServices = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/data/service', {
+      const response = await fetch('https://techbackend-h4vp.onrender.com/api/data/service', {
         method: "GET",
       });
-      setRes(response.ok);
-      console.log(response.ok);
+     
 
       if (response.ok) {
         const data = await response.json();

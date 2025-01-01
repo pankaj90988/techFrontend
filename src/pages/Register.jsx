@@ -26,7 +26,7 @@ const Register = () => {
   const formHandler = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/auth/register', {
+      const response = await fetch('https://techbackend-h4vp.onrender.com/api/auth/register', {
         method: "POST",
         headers: {
           'Content-Type': "application/json",
@@ -49,6 +49,8 @@ const Register = () => {
           phone: ""
         });
         navigate("/login");
+      }else{
+        alert("something went wrong");
       }
     } catch (error) {
       console.log("In Register", error);
