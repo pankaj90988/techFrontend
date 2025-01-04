@@ -42,7 +42,7 @@ return (
         <header>
             <div className="container">
                 <div className="brand-logo">
-                    <Link to="/"><img src={Logo} alt="Brand Logo" /></Link>
+                    <Link to="/home"><img src={Logo} alt="Brand Logo" /></Link>
                 </div>
 
                 <nav>
