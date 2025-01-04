@@ -44,7 +44,7 @@ const Pagenotfound = () => {
             look into it.
           </p>
           <div className="btns">
-            <NavLink to='/'><button>Return Home</button></NavLink>
+            <NavLink to='/home'><button>Return Home</button></NavLink>
             <NavLink to='/contact'><button>Report Problem</button></NavLink>
           </div>
         </div>

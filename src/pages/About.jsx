@@ -32,16 +32,13 @@ const About = () => {
 
   useEffect(() => {
     const currentWidth = window.innerWidth;
-    console.log(currentWidth);
     setscreenWidth(currentWidth);
   }, [screenWidth])
 
   useEffect(() => {
     const scrollHandler = (dets) => {
-      console.log(dets);
       setLastscrollTop(lastscrollTop);
       if (dets.deltaY > 0) {
-        console.log("Seedha Scrolling");
         gsap.to(".text-container", {
           transform: "translateX(-200%)",
           duration: 5,
@@ -53,7 +50,6 @@ const About = () => {
           rotate: 0,
         })
       } else {
-        console.log("Ulta Scrolling");
         gsap.to(".text-container", {
           transform: "translateX(0%)",
           duration: 5,
@@ -214,7 +210,7 @@ const About = () => {
               swiperData.map((data) => (
                 <SwiperSlide key={data.id}>
                   <div className="swiper-card">
-                    <a href={data.link}>
+                    <a href={data.link} target='_blank'>
                       <img src={data.image} height="250" alt="" />
                     </a>
                     <h3>{data.title}</h3>

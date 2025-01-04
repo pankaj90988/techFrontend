@@ -15,7 +15,7 @@ const Navbar = () => {
             y: -70,
             duration: 0.6,
             delay: 0.1,
-            transition:2,
+            transition: 2,
             opacity: 0
         })
     })
@@ -28,100 +28,53 @@ const Navbar = () => {
             stagger: -0.3
         })
     })
-    useGSAP(() => {
-        gsap.from("input", {
-            y: -50,
-            duration: 0.5,
-            delay: 0.5,
-            opacity: 0,
-            stagger: 0.3
-        })
-    })
 
 
 
+const [menu, setMenu] = useState(false);
+
+const [navWidth, setNavWidth] = useState(false);
+// const [addclass, setaddclass] = useState("");
 
 
-
-    const [open, setOpen] = useState(false);
-    const [menu, setMenu] = useState(false);
-    const [input, setinput] = useState("");
-    // const [navWidth, setNavWidth] = useState(false);
-    // const [addclass, setaddclass] = useState("");
-
-
-    const inputHandler = (e) => {
-        console.log(e.target.value);
-        setinput(e.target.value);
-        console.log(input);
-    }
-    const searchHandler = (e) => {
-        console.log(e.target);
-        //  setOpen()
-    }
-
-
-
-
-
-
-    return (
-        <>
-            <header>
-                <div className="container">
-                    <div className="brand-logo">
-                        <Link to="/"><img src={Logo} alt="Brand Logo" /></Link>
-                    </div>
-
-                    <div className={open ? ("search display") : ("search")}>
-                        <input
-                            value={input}
-                            className='search-input'
-                            type="text" placeholder='Search here..'
-                            onChange={(e) => inputHandler(e)}
-                        />
-                        <input className='search-btn'
-                            type="button"
-                            value="Search"
-                            onClick={(e) => searchHandler(e)}
-                        />
-                    </div>
-
-                    <nav>
-                        <div className={menu ? ("main-menu-cont-open") : ("main-menu-cont")}>
-                            <ul className={!menu ? "nav navWidth" : "nav"}>
-                                <li><NavLink to="/">Home</NavLink></li>
-                                <li><NavLink to="/about">About</NavLink></li>
-                                <li><NavLink to="/service">Services</NavLink></li>
-                                <li><NavLink to="/contact">Contact</NavLink></li>
-                                <li><NavLink to="/register">Register</NavLink></li>
-                                <li><NavLink to="/login">Login</NavLink></li>
-                            </ul>
-                        </div>
-                    </nav>
-
-                    <div className="search-icon-menu-icon-main-cont">
-                        <div className="search-icon-menu-icon">
-                            <div className="search-icon" onClick={() => {
-                                setOpen(!open);
-                            }}>
-                                <IoSearchOutline className='menu-cross-bar-search' />
-                            </div>
-                            <div className="menu-icon" onClick={() => {
-                                setMenu(!menu)
-                            }}>
-                                {
-                                    !menu ? (<RiMenu3Line className='menu-cross-bar-search' />) : (<RiCloseLargeFill className='menu-cross-bar-search' />)
-                                }
-                            </div>
-                        </div>
-                    </div>
-
-
+return (
+    <>
+        <header>
+            <div className="container">
+                <div className="brand-logo">
+                    <Link to="/"><img src={Logo} alt="Brand Logo" /></Link>
                 </div>
-            </header>
-        </>
-    )
-}
 
+                <nav>
+                    <div className={menu ? ("main-menu-cont-open") : ("main-menu-cont")}>
+                        <ul className={!menu ? "nav navWidth" : "nav"}>
+                            <li><NavLink to="/home">Home</NavLink></li>
+                            <li><NavLink to="/about">About</NavLink></li>
+                            <li><NavLink to="/service">Services</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
+                            <li><NavLink to="/">Register</NavLink></li>
+                            <li><NavLink to="/login">Login</NavLink></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div className="search-icon-menu-icon-main-cont">
+                    <div className="search-icon-menu-icon">
+
+                        <div className="menu-icon" onClick={() => {
+                            setMenu(!menu)
+                        }}>
+                            {
+                                !menu ? (<RiMenu3Line className='menu-cross-bar-search' />) : (<RiCloseLargeFill className='menu-cross-bar-search' />)
+                            }
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+    </>
+)
+
+}
 export default Navbar

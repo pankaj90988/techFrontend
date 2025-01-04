@@ -13,7 +13,6 @@ const Login = () => {
 
 
   const inputHandler = (e) => {
-    console.log(e.target.value);
     let name = e.target.name;
     let value = e.target.value;
 
@@ -25,9 +24,7 @@ const Login = () => {
   };
 
   const submitHandler = async (e) => {
-    console.log(e, "hellloo");
     e.preventDefault();
-    console.log(e, "hellloo");
     try {
       const response = await fetch('https://techbackend-h4vp.onrender.com/api/auth/login', {
         method: "POST",
@@ -36,16 +33,13 @@ const Login = () => {
         },
         body: JSON.stringify(data)
       });
-
-      console.log("in login form", response);
-
       if (response.ok) {
         alert("Login Successfully");
         setData({
           email:"",
           password:""
         });
-        navigate('/');
+        navigate('/home');
 
       } else {
         alert("Invalid Credential");

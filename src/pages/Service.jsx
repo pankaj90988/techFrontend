@@ -19,7 +19,6 @@ const Service = () => {
         setServicedata(alldata);
 
       }
-      console.log(servicedata);
     } catch (error) {
       console.log("Something went wrong with internal server");
     }
@@ -43,8 +42,7 @@ const Service = () => {
               servicedata.length > 0 ? (
 
                 servicedata.map((elem, index) => {
-                  console.log(servicedata);
-                  const { price, description, provider, service } = elem;
+                  const { price, description, provider, service} = elem;
                   return (
                     <>{servicedata != null ?
                       <div className="card" key={index}>

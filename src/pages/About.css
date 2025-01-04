@@ -31,9 +31,10 @@
 }
 
 .about-left-content p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     letter-spacing: 0.01rem;
     margin-top: 1.9rem;
+    text-align: justify;
 }
 
 .btn-box button {

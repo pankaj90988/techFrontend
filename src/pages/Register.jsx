@@ -14,7 +14,6 @@ const Register = () => {
   });
 
   const inputHandler = (e) => {
-    console.log(e);
     let name = e.target.name;
     let value = e.target.value;
     setUser({
@@ -34,9 +33,8 @@ const Register = () => {
         body: JSON.stringify(user),
       });
 
-      console.log(response);
       if (response.ok) {
-        alert("Registration succesfull")
+        alert("Registration succesfull");
         // const res_data = await response.json();
         //storing data in localstorage
         // sotreTokenInLocalStorage(res_data.token);
@@ -53,7 +51,7 @@ const Register = () => {
         alert("something went wrong");
       }
     } catch (error) {
-      console.log("In Register", error);
+      console.log("In Register:", error);
     }
 
   };

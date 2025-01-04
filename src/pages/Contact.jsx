@@ -11,7 +11,6 @@ const Contact = () => {
   })
 
   const inputHandler = (e) => {
-    console.log(e.target);
     const name = e.target.name;
     const value = e.target.value;
 
@@ -45,8 +44,6 @@ const Contact = () => {
             });
 
             const data = await response.json();
-            console.log(data);
-
             alert("message send successfully");
 
         }
