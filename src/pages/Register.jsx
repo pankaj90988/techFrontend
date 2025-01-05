@@ -48,7 +48,7 @@ const Register = () => {
         });
         navigate("/login");
       }else{
-        alert("something went wrong");
+        alert("something went wrong try again");
       }
     } catch (error) {
       console.log("In Register:", error);

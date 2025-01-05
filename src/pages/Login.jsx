@@ -42,7 +42,7 @@ const Login = () => {
         navigate('/home');
 
       } else {
-        alert("Invalid Credential");
+        alert("Invalid email or password");
       }
     } catch (error) {
       console.log("in login", error)
